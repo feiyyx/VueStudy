@@ -8,9 +8,10 @@
         <script>window.onresize=function(){function n(){var n=Math.min(window.screen.width,window.innerWidth,document.documentElement.clientWidth);document.querySelector("html").style["font-size"]=n/7.5+"px"}return n(),n}();</script>
         <link rel="stylesheet" href="weui.css">
         <style>
-            body, div, html, footer {
+            body, div, html, footer, a, dl, dd, dt {
                 padding: 0;
                 margin: 0;
+                text-decoration: none;
             } 
 
             body, html {
@@ -19,14 +20,32 @@
                 font-family: Microsoft Yahei;
             }
 
+            a:link    {color:black;}
+            a:visited {color:black;}
+            a:hover   {color:black;}
+            a:active  {color:black;}
+
+
             #items {
-                display: flex;
                 margin-top: .2rem;
-                padding: .2rem 0;
+                padding: .35rem  0 .45rem 0;
                 width: 100%;
-                height: 6rem;
                 background-color: #fff;
+                font-size: .32rem;
             }
+
+            #items img {
+                height: .85rem;
+                padding: .2rem 0 ;
+            }
+
+            #items dl {
+                display: inline-block;
+                width: 32%;
+                text-align: center;
+                margin: .2rem 0;
+            }
+
 
             #rollpad {
                 display: flex;
@@ -48,15 +67,18 @@
                 text-align: center;
             }
 
-            .container {
-                
-            }
 
             .top {
                 display: flex;
                 width: 100%;
                 height: 3.19rem;
                 background-color: #66ccff;
+            }
+
+            .top h4 {
+                margin: .4rem auto;
+                text-align: center;
+                color: #fff;
             }
 
             
@@ -67,16 +89,86 @@
 <body>
         <div class="container">
             <div class="wrapper">
-                <div class="top"></div>
+                <div class="top">
+                    <h4>服务中心</h4>
+                </div>
                 <div id="items">
-                    <a>
+                    <a href="#">
                         <dl>
-                            <dt></dt>
-                            <dd></dd>
+                            <dt>
+                                <img src="image/center.svg">
+                            </dt>
+                            <dd>个人中心</dd>
                         </dl>
                     </a>
+
+                    <a href="#">
+                            <dl>
+                                <dt>
+                                    <img src="image/support.svg">
+                                </dt>
+                                <dd>举报中心</dd>
+                            </dl>
+                        </a>
+
+                        <a href="#">
+                                <dl>
+                                    <dt>
+                                        <img src="image/news.svg">
+                                    </dt>
+                                    <dd>法律新闻</dd>
+                                </dl>
+                            </a>
+
+                        <a href="#">
+                             <dl>
+                                <dt>
+                                     <img src="image/community.svg">
+                                </dt>
+                                <dd>社区服务</dd>
+                             </dl>
+                        </a>
+                        <a href="#">
+                                <dl>
+                                   <dt>
+                                        <img src="image/convinent.svg">
+                                   </dt>
+                                   <dd>便民服务</dd>
+                                </dl>
+                        </a>
+
+                        <a href="#">
+                                <dl>
+                                   <dt>
+                                        <img src="image/public.svg">
+                                   </dt>
+                                   <dd>公益活动</dd>
+                                </dl>
+                           </a>
+
+                           <a href="#">
+                                <dl>
+                                   <dt>
+                                        <img src="image/security.svg">
+                                   </dt>
+                                   <dd>公共安全</dd>
+                                </dl>
+                           </a>
+
+                           <a href="#">
+                                <dl>
+                                    <dt>
+                                        <img src="image/market.svg">
+                                    </dt>
+                                    <dd>积分商城</dd>
+                                </dl>
+                            </a>
+                
                 </div>
-                <div id="rollpad"></div>
+                <div id="rollpad">
+
+                    <marquee direction="up" scrolldelay="100" scrollamount="3">·test</marquee>
+                </div>
             </div>
             <footer id="footer">
                 @xxxxxxxxx
