@@ -27,7 +27,7 @@
             a:active  {color:black;}
 
 
-            #items {
+            #index-items {
                 margin-top: .2rem;
                 padding: .35rem  0 .45rem 0;
                 width: 100%;
@@ -35,12 +35,12 @@
                 font-size: .32rem;
             }
 
-            #items img {
+            #index-items img {
                 height: .85rem;
                 padding: .2rem 0 ;
             }
 
-            #items dl {
+            #index-items dl {
                 display: inline-block;
                 width: 32%;
                 text-align: center;
@@ -76,7 +76,7 @@
                 background-color: #66ccff;
             }
 
-            .top h4 {
+            .top h5 {
                 margin: .4rem auto;
                 text-align: center;
                 color: #fff;
@@ -91,10 +91,10 @@
         <div class="container">
             <div class="wrapper">
                 <div class="top">
-                    <h4>服务中心</h4>
+                    <h5>公益诉讼中心</h5>
                 </div>
-                <div id="items">
-                    <a href="#">
+                <div id="index-items">
+                    <a href="personal.html">
                         <dl>
                             <dt>
                                 <img src="image/center.svg">
@@ -163,7 +163,7 @@
 <script>
 $(document).ready(function(){
     $(".more").on("click", function(event) {
-        $("#items").load("more.html");
+        $("#index-items").load("more.html");
     });
 });
 </script>
