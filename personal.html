@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-3.3.1.min.js"></script>
         <style>
-                body, div, html, footer, a, dl, dd, dt {
+                body, div, html, footer, a, dl, dd, dt, span {
                     padding: 0;
                     margin: 0;
                     text-decoration: none;
@@ -31,31 +31,14 @@
                 #personal-items {
                     margin-top: .2rem;
                     width: 100%;
-                    height: 6rem;
+                    height: 8rem;
                     background-color: #fff;
                     font-size: .32rem;
                 }
     
-                #personal- img {
+                #personal-items img {
                     height: .85rem;
                     padding: .2rem 0 ;
-                }
-    
-                #items dl {
-                    display: inline-block;
-                    width: 32%;
-                    text-align: center;
-                    margin: .2rem 0;
-                }
-    
-    
-                #rollpad {
-                    display: flex;
-                    margin-top: .2rem;
-                    padding: .2rem 0;
-                    width: 100%;
-                    height: 2rem;
-                    background-color: #fff;
                 }
     
                 #footer {
@@ -71,30 +54,142 @@
     
     
                 .top {
-                    display: flex;
+                    display: block;
                     width: 100%;
-                    height: 3.19rem;
+                    height: 3.3rem;
                     background-color: #66ccff;
                 }
     
-                .top span {
-                    margin: .4rem auto;
-                    text-align: center;
-                    font-size: .4rem;
-                    color: #fff;
+                .top .header {
+                    position: absolute;
+                    top: .4em;
+                    left: 3rem;
+                    border: 3px solid #5eb8e4;
+                    border-radius: 50%;
+                    background-color: #f0f0f0;
                 }
-    
-                
-    
-    
+
+                .top .header img {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    border-radius: 50%;
+                    
+                }
+
+                .top .info {
+                    position: absolute;
+                    top: 2.2rem;
+                    margin: 0 2.65rem;
+                    width: 30%;
+                    text-align: center;
+                    color: #fff
+                   
+                }
+
+                .top .info span { 
+                    font-size: .35rem;
+                }
+
+                .top .info .points { 
+                    display: block;
+                    font-size: .2rem;
+                    color: #d6eaf3;
+                }
+
+                .top .check-in {
+                    position: absolute;
+                    right: .5rem;
+                    top: 1.4rem;
+                    font-size: .28rem;
+                    background-color: orange;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+
+                .middle {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 1.3rem;
+                    width: 100%;
+                    background-color: #fff;
+                }
+
+                .middle div {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: stretch;
+                    
+                    
+                    height: 1.2rem;
+                    width: 2.2rem;
+                    text-align: center;
+                }
+
+                .middle span {
+                    display: block;
+                    font-size: .25rem;
+                    bottom: 0rem;
+                }
+
+                .middle .label{
+                    padding-top: .15rem;
+                    font-size: .3rem;
+                    height: .5rem;
+                    width: 2.2rem;
+                }
+
+                .middle .number {  
+                    position: absolute;
+                    top: 4rem;
+                    color: #aaa;
+                }
+
+                .middle div+div span {
+                    padding-left: .2rem;
+                }
+
+
+               .middle div+div::before {
+                    display: inline-block;
+                    position: relative;
+                    top: .1rem;
+                    
+                   
+                    height: 1rem;
+                    width: 1px;
+
+                    border-left: .01rem solid #ccc;
+                    content: '';
+                    vertical-align: -.3rem;
+                } /***/
+
             </style>
     </head>
     <body>
             <div class="container">
                 <div class="wrapper">
                      <div class="top">
-                        <span>个人中心</span>
+                        <div class="header"><img src="image/personal.svg"></div>
+                        <div class="info">
+                            <span>用户1</span>
+                        </div>
+                        
+
                     </div>
+                    <div class="middle">
+                            <div>
+                                <div class="label">总举报数</div>
+                                <span class="number">100</span>
+                            </div>
+                            <div>
+                                <span class="label">有效举报</span>
+                                <span class="number">100</span>
+                            </div>
+                            <div>
+                                <span class="label">我的积分</span>
+                                <span class="number">100</span>
+                            </div>
+                        </div>
                     <div id="personal-items">
                             <div class="weui-cells">
                                 <div class="weui-cell weui-cell_access">
@@ -103,7 +198,7 @@
                                     </div>
                             </div>
                                 <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">我的积分</div>
+                                        <div class="weui-cell__bd">积分获取</div>
                                         <div class="weui-cell__ft" style="font-size: 0"></div>
                                 </div>
                                 <div class="weui-cell weui-cell_access">
@@ -126,10 +221,5 @@
             
     </body>
     <script>
-        $(document).ready(function(){
-            $(".weui-cell_access").on("click", function(event) {
-                alert(1);
-            });
-        });
     </script>
 </html>

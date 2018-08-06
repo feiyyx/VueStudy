@@ -55,6 +55,13 @@
         </div>
         <div class="weui-cells__title">举报内容</div>
         <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            <label class="weui-label">举报标题</label></div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" type="text" placeholder="标题"">
+                            </div>
+                    </div>
                 <div class="weui-cell" >
                         <div class="weui-cell__hd"><label class="weui-label">举报类型</label></div>
                         <div class="weui-cell__bd">
@@ -130,7 +137,8 @@
                     $selectSheet.css("display" , "block");
                 });
 
-                //小图点击浏览功能
+                //小图点击浏览功能，使用了weui中的jquery
+                
                 $uploaderInput.on("change", function(e){
                     var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
                     for (var i = 0, len = files.length; i < len; ++i) {
@@ -178,7 +186,7 @@
                     cols: [
                         {
                             textAlign: 'center',
-                            values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+                            values: ['社区相关', '村委会', '环境污染', '食品药品', '公共安全', '旅游相关', '交通相关', '医疗相关', '城市文明'] 
                         }
                     ]
                 });
